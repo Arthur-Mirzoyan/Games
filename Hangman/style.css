@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 0.3fr 2fr;
+    height: 100vh;
+    background-color: #D3D3D3;
+}
+
+.game {
+    width: 55%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 20px;
+    place-self: center;
+}
+
+#imgBox {
+    background-image: url("img/steps_00.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#infoBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 15px;
+    padding: 20px;
+}
+
+#wordHintBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#playerBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.letterBox,
+.keys {
+    width: 35px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    border: 2px solid black;
+    grid-row: 1;
+    margin: 10px;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+}
+
+.hintLine {
+    font-size: 22px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #98b6d4;
+}
+
+.playAgainBtn {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: lightgreen;
+    border: 2px solid lightseagreen;
+}
+
+.answer {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 1200px) {
+    .game {
+        width: 90%;
+    }
+}

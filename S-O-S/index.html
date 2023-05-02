@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="SOS.js"></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <script>
+            var player1 = prompt("PLayer1 : ").trim() || "Player 1";
+            var player2 = prompt("PLayer2 : ").trim() || "Player 2";
+        </script>
+        <div id="game">
+            <div id="board"></div>
+
+            <div id="info">
+                <div class="players">
+                    <h2 class="playing" id="player1"></h2>
+                    <h2 id="player2"></h2>
+                </div>
+                <div class="symbols">
+                    <button onclick="changeSymbol('S')" class="active" id="btnS">S</button>
+                    <button onclick="changeSymbol('O')" id="btnO">O</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
