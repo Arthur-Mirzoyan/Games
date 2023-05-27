@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guess The Word</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="script.js" defer></script>
+        <link rel="shortcut icon" href="../img/guessTheWord.png" type="image/x-icon">
+    </head>
+    <body>
+        <dialog id="modal">
+            <h1 id="info">You Guessed The Word!!</h1>
+            <button>Main Menu</button>
+            <button>Next Word</button>
+        </dialog>
+        <div class="startPanel">
+            <div class="controls">
+                <button class="variant active">4 Letter</button>
+                <button class="variant">5 Letter</button>
+                <button id="start">Start</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="wordPanel">
+                <div id="box"></div>
+            </div>
+            <div id="controlPanel">
+                <div id="keyboard"></div>
+            </div>
+            <button class="mainMenu">Main Menu</button>
+        </div>
+    </body>
+</html>

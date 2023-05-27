@@ -133,8 +133,8 @@ function isWin(word, letters) {
 
 function theEnd() {
     let body = document.querySelector('body');
-
-    body.innerHtml = '<h1>You won the game!</h1>';
+    body.innerHTML = '';
+    body.innerHTML = '<h1>You won the game!</h1>';
 }
 
 nextLevel();
