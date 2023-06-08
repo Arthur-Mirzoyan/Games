@@ -1,0 +1,13 @@
+body {
+    display: grid;
+    height: 100vh;
+}
+
+form {
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid;
+    padding: 20px;
+}

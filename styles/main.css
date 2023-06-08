@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Sigmar', cursive;
+}
+
+::selection {
+    background-color: black;
+    color: skyblue;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2b2b2b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: deepskyblue;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    background-color: white;
+    color: deepskyblue;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 20px;
+    padding-top: 90px;
+    scroll-snap-align: start;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+hr {
+    display: none;
+    height: 4px;
+    border: none;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 10px;
+    pointer-events: all;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#menu {
+    width: 200px;
+}
+
+#menu ul li {
+    padding: 10px;
+}
+
+#menu ul li img {
+    width: 30px;
+    height: auto;
+    float: right;
+}
+
+#menu ul a {
+    color: black;
+    font-size: 18px;
+}
+
+#menu ul li:hover {
+    padding: 10px;
+    background-color: skyblue;
+}

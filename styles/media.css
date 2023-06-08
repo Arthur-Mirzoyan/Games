@@ -1,0 +1,62 @@
+@media screen and (max-width: 1300px) {
+    section {
+        min-height: unset !important;
+        height: auto !important;
+    }
+
+    #homoe {
+        grid-template-columns: 0.5fr 1fr !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        scroll-snap-type: none !important;
+    }
+
+    #home {
+        display: flex !important;
+        text-align: center;
+        gap: 0 !important;
+    }
+
+    hr {
+        display: block !important;
+        background-color: skyblue;
+    }
+
+    .infoBox {
+        width: 100% !important;
+        font-size: large !important;
+    }
+
+    #animCircle {
+        display: none !important;
+    }
+
+    #games {
+        padding-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header nav {
+        display: none;
+    }
+
+    header {
+        justify-content: space-between !important;
+        padding-inline-end: 20px !important;
+        background-color: lightgray !important;
+    }
+
+    #menuMore {
+        display: block !important;
+        aspect-ratio: 1 / 1;
+        width: 30px;
+    }
+
+    #home {
+        height: auto !important;
+    }
+}

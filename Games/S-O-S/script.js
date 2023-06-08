@@ -2,6 +2,8 @@ const game = document.getElementById('game');
 const board = document.getElementById('board');
 const player1Box = document.getElementById('player1');
 const player2Box = document.getElementById('player2');
+const player1Score = document.getElementById('player1Score');
+const player2Score = document.getElementById('player2Score');
 const buttonS = document.getElementById('btnS');
 const buttonO = document.getElementById('btnO');
 
@@ -17,9 +19,7 @@ var symbol = 'S';
 var pl1 = 0, pl2 = 0;
 var player = 0;
 
-
-
-function drawBoard(count, size) {
+function drawBoard(count) {
     board.style.gridTemplateColumns = `repeat(${count}, 1fr)`;
 
     for (let i = 0; i < count; i++) {
@@ -38,8 +38,10 @@ function drawBoard(count, size) {
 }
 
 function setInfo(pl1, pl2) {
-    player1Box.innerText = `${player1} => ${pl1}`;
-    player2Box.innerText = `${player2} => ${pl2}`;
+    player1Box.innerText = player1;
+    player2Box.innerText = player2;
+    player1Score.innerText = pl1;
+    player2Score.innerText = pl2;
 }
 
 function changeSymbol(letter) {
@@ -71,10 +73,14 @@ function addSymbol(i, j) {
         if (player % 2 == 0) {
             player1Box.className = "";
             player2Box.className = "playing";
+            player1Score.className = "";
+            player2Score.className = "playing";
         }
         else {
             player2Box.className = "";
             player1Box.className = "playing";
+            player2Score.className = "";
+            player1Score.className = "playing";
         }
         player++;
     }
@@ -110,15 +116,25 @@ function checkSOS(i, j, symbol) {
 
 function isEnd(pl1, pl2) {
     if (freeSpaceLeft == 0) {
-        let winner = player1;
-        if (pl2 > pl1) winner = player2;
-
         game.innerHTML = '';
-        game.innerHTML = `<h1>Winner is : ${winner}</h1><br><h2>${player1} : ${pl1}</h2><br><h2>${player2} : ${pl2}</h2>`;
+
+        let winner = player1;
+        if (pl1 == pl2)
+            game.innerHTML = `<h1>It's a tie.</h1><br><h2>${player1} : ${pl1}</h2><br><h2>${player2} : ${pl2}</h2>`;
+
+        else if (pl2 > pl1) {
+            winner = player2;
+            game.innerHTML = `<h1>Winner is : ${winner}</h1><br><h2>${player1} : ${pl1}</h2><br><h2>${player2} : ${pl2}</h2>`;
+        }
+
+        game.innerHTML = game.innerHTML + `<br><button onclick="restart()">Play Again</button>`;
         return true;
     }
 }
 
+function restart() {
+    location.reload();
+}
 
 // ----------------------------------------- //
 

@@ -1,5 +1,3 @@
-import wordsList from './data.json' assert {type: 'json'}
-
 const backBtn = document.querySelector('.mainMenu');
 const startPanel = document.querySelector('.startPanel');
 const variantBtns = document.getElementsByClassName('variant');
@@ -215,7 +213,6 @@ function showInfo(result) {
 }
 
 function toggleKeyboard(arr) {
-    console.log(arr)
     for (let index of arr) {
         let letter = letterBoxes[tryNumber][index].innerText;
         let code = letter.charCodeAt(0);

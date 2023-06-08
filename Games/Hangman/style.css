@@ -21,18 +21,16 @@ body {
     place-self: center;
 }
 
-#imgBox {
-    background-image: url("img/steps_00.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
 #infoBox {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 15px;
     padding: 20px;
+}
+
+#imgBox {
+    width: 100%;
 }
 
 #wordHintBox {
@@ -87,5 +85,32 @@ button:hover {
 @media screen and (max-width: 1200px) {
     .game {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        grid-template-rows: max-content;
+    }
+
+    .game {
+        grid-template-columns: 1fr;
+    }
+
+    #imgBox {
+        width: 50%;
+        height: auto;
+        margin: auto; 
+    }
+
+    #infoBox {
+        padding: 0;
+        grid-template-rows: auto;
+    }
+
+    .letterBox{
+        width: 30px;
+        border-radius: 5px;
+        margin: 5px;
     }
 }

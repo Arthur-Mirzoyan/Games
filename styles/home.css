@@ -1,0 +1,36 @@
+#home {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.infoBox {
+    width: 90%;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.infoBox span {
+    font-size: 50px;
+}
+
+.infoBox p {
+    color: gray;
+}
+
+#animCircle {
+    grid-column: 2;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+#animCircle img {
+    max-width: 750px;
+    max-height: 750px;
+    width: 100%;
+    height: auto;
+    animation: spin 60s infinite linear;
+}

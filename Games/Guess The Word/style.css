@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: lightcyan;
     padding: 20px;
 }
@@ -92,8 +92,8 @@ body {
 }
 
 .mainMenu {
-    width: 150px;
-    height: 50px;
+    width: 100px;
+    height: 30px;
     border: none;
     background-color: lightcoral;
     position: absolute;
@@ -174,7 +174,86 @@ body {
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.2);
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    #keyboard {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .submitBtn {
+        display: flex;
+        justify-content: center;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .startPanel {
+        width: 100%;
+    }
+
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .controls button {
+        width: 100%;
+        height: 50px;
+    }
+
+    .letterBox,
+    .keys,
+    .submitBtn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .submitBtn {
+        font-size: 10px;
+    }
+
+    #wordPanel,
+    #controlPanel {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .mainMenu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .letterBox,
+    .keys,
+    .submitBtn {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    #wordPanel {
+        margin-top: 80px;
+    }
+
+    #controlPanel {
+        margin-bottom: 20px;
+    }
+
+    #keyboard {
+        justify-content: center;
     }
 }

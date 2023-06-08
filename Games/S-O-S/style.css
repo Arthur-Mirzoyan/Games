@@ -47,24 +47,30 @@ body {
 .symbols button {
     width: 80%;
     aspect-ratio: 1 / 1;
-    font-size: 500%;
-    border: none;
+    font-size: clamp(30px, 500%, 50px);
     border-radius: 10px;
     color: white;
     font-weight: bold;
-    border: 1px solid black;
+    border: 2px solid;
 }
 
 #btnS {
     background-color: tomato;
+    border-color: red;
 }
 
 #btnO {
     background-color: lightskyblue;
+    border-color: blue;
 }
 
 .active {
-    box-shadow: 0 0 0 10px black;
+    border-width: 5px !important;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 #board button, #board button:disabled {
@@ -75,10 +81,34 @@ body {
     font-weight: bold;
 }
 
-#player1, #player2 {
+#player1, #player2, #player1Score, #player2Score {
+    display: flex;
+    align-items: center;
     padding: 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#player1, #player2 {
+    justify-content: start;
+}
+
+#player1Score, #player2Score {
+    justify-content: end;
 }
 
 .playing {
     background-color: lightskyblue;
+}
+
+@media screen and (max-width: 750px) {
+    #game {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.3fr;
+    }
+
+    #board {
+        padding: 5px 15px;
+        /* background-color: red; */
+    }
 }

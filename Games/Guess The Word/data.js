@@ -1,4 +1,4 @@
-{
+var wordsList = {
     "four": [
         "ARCH",
         "DARE",

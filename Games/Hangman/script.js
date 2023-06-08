@@ -86,7 +86,7 @@ function checkLetter(word, letter, code) {
     }
     else {
         keys[letterIndex].style.backgroundColor = "tomato";
-        imgBox.style.backgroundImage = `url(img/steps_0${mistakes++}.png)`;
+        imgBox.src = `img/steps_0${mistakes++}.png`;
     }
 
     keys[letterIndex].disabled = true;
@@ -118,7 +118,7 @@ function restart(level = 1) {
     playerBox.innerHTML = '';
     mistakes = 1;
 
-    imgBox.style.backgroundImage = `url(img/steps_00.png)`;
+    imgBox.src = `img/steps_00.png`;
     if (level == 1) data = shuffle(words.wordsList);
     nextLevel(level);
 }

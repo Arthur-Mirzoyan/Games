@@ -4,31 +4,86 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles/media.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/sections.css">
+        <script src="script.js" defer></script>
+        <title>MultiLand</title>
     </head>
     <body>
-        <div class="container">
+        <header>
+            <h2>MultiLand</h2>
+            <nav>
+                <ul>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#home">Home</a></li>
+                </ul>
+            </nav>
+            <img id="menuMore" src="img/menuMore.png">
+        </header>
+        <section id="home">
+            <div class="infoBox">
+                <span>Welcome</span>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius placeat molestias sapiente molestiae
+                    eum eaque, ex ipsum doloribus vero, obcaecati illum error dolore ea accusantium adipisci in eligendi
+                    totam asperiores!
+                </p>
+            </div>
+            <div id="animCircle">
+                <img src="img/logo.png">
+            </div>
+        </section>
+        <hr>
+        <section id="games">
             <div class="card">
-                <img src="img/tic_tac_toe.png">
+                <img src="Games/img/tic_tac_toe.png">
                 <h2>Tic-Tac-Toe</h2>
-                <a href="Tic-Tac-Toe/index.html">PLAY</a>
+                <a target="_blank" href="Games/Tic-Tac-Toe/index.html">PLAY</a>
             </div>
             <div class="card">
-                <img src="Hangman/img/steps_07.png">
+                <img src="Games/Hangman/img/steps_07.png">
                 <h2>HANGMAN</h2>
-                <a href="Hangman/index.html">PLAY</a>
+                <a target="_blank" href="Games/Hangman/index.html">PLAY</a>
             </div>
             <div class="card">
-                <img src="img/sos.png">
+                <img src="Games/img/sos.png">
                 <h2>S-O-S</h2>
-                <a href="S-O-S/index.html">PLAY</a>
+                <a target="_blank" href="Games/S-O-S/index.html">PLAY</a>
             </div>
             <div class="card">
-                <img src="img/guessTheWord.png">
+                <img src="Games/img/guessTheWord.png">
                 <h2>Guess The Word</h2>
-                <a href="Guess The Word/index.html">PLAY</a>
+                <a target="_blank" href="Games/Guess The Word/index.html">PLAY</a>
             </div>
-        </div>
+        </section>
+        <hr>
+        <section id="tools">
+            <div class="card">
+                <img src="Tools/ImgConverter/img/logo.png">
+                <h2>Image Converter</h2>
+                <a target="_blank" href="Tools/ImgConverter/index.html">Visit</a>
+            </div>
+        </section>
+        <dialog>
+            <div id="menu">
+                <ul>
+                    <a onclick="toggleDialog()" href="#home">
+                        <li>Home<img src="img/home.png"></li>
+                    </a>
+                    <hr>
+                    <a onclick="toggleDialog()" href="#games">
+                        <li>Games<img src="img/gamepad.png"></li>
+                    </a>
+                    <hr>
+                    <a onclick="toggleDialog()" href="#tools">
+                        <li>Tools<img src="img/gamepad.png"></li>
+                    </a>
+                </ul>
+            </div>
+        </dialog>
     </body>
 </html>
