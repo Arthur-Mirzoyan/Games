@@ -15,8 +15,8 @@ menuMore.addEventListener('click', () => {
             event.clientY < dimensions.top || event.clientY > dimensions.bottom) {
             menu.close();
 
-            body.style.height = "auto"; 
-            body.style.overflow = "auto"; 
+            body.style.height = "auto";
+            body.style.overflow = "auto";
         }
 
     });
@@ -25,3 +25,11 @@ menuMore.addEventListener('click', () => {
 function toggleDialog() {
     menu.close();
 }
+
+/* Context Menu
+
+document.addEventListener("contextmenu", (e) => {
+     e.preventDefault();
+});
+
+*/

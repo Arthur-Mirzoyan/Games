@@ -21,5 +21,5 @@ function download() {
         a.download = `converted.${type.value}`;
         a.click();
     }
-    catch (error) { console.log("Something went wrong.") }
+    catch (error) { alert("Something went wrong.") }
 }

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+    font-size: 22px;
+}
+
+body {
+    height: 100vh;
+    padding: 20px;
+    background-color: #EEEEEE
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    text-align: center;
+}
+
+#colorPreview {
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.color {
+    aspect-ratio: 1 / 1;
+    width: 20px;
+    border-radius: 50%;
+    grid-column-start: 1;
+    align-self: center;
+}
+
+.sliders {
+    display: grid;
+    grid-template-columns: 20px 40px auto;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.value::-webkit-inner-spin-button,
+.value::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.value {
+    width: 100%;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    align-self: center;
+}
+
+input[type="range"] {
+    width: 100%;
+    grid-column-start: 3;
+    align-self: center;
+}
+
+.colorCodes::before {
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: gray;
+    display: block;
+    margin: auto;
+    position: relative;
+}
+
+.colorCodes {
+    width: 100%;
+    min-height: 100%;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.colorCodes::before {
+    top: -10px;
+}
+
+.colorCodes table {
+    width: 100%;
+}
+
+.copyBtn {
+    width: 50%;
+    border: 1px solid gray;
+    background-color: #C2EEB6;
+    border-radius: 10px 20px / 70px 30px;
+    transition: all ease-in-out .2s;
+}
+
+.copyBtn:hover {
+    background-color: #C2CF96;
+}
+
+@media screen and (max-width: 1023px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #colorPreview {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .sliders {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    .colorCodes {
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+
+    .copyBtn {
+        width: 80%;
+    }
+}

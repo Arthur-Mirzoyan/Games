@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Color Picker</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="colorPreview"></div>
+            <div class="sliders">
+                <input type="color" id="colorInput" oninput="toggleChange('color')">
+                <span style="grid-column-start: 3; align-self: center;">Pick Color!</span>
+
+                <div style="background-color: red;" class="color"></div>
+                <input class="value" type="number" id="redValue" value="0" min="0" max="255">
+                <input type="range" id="colorRed" value="0" min="0" max="255" oninput="toggleChange()">
+
+                <div style="background-color: green;" class="color"></div>
+                <input class="value" type="number" id="greenValue" value="0" min="0" max="255">
+                <input type="range" id="colorGreen" value="0" min="0" max="255" oninput="toggleChange()">
+
+                <div style="background-color: blue;" class="color"></div>
+                <input class="value" type="number" id="blueValue" value="0" min="0" max="255">
+                <input type="range" id="colorBlue" value="0" min="0" max="255" oninput="toggleChange()">
+            </div>
+            <div class="colorCodes">
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th style="width: 50%;">Code</th>
+                        <th>Copy</th>
+                    </tr>
+                    <tr>
+                        <td>RGB</td>
+                        <td id="rgb">( 0, 0, 0 )</td>
+                        <td><button class="copyBtn" onclick="copyCode('rgb')">Copy</button></td>
+                    </tr>
+                    <tr>
+                        <td>HEX</td>
+                        <td id="hex">#000000</td>
+                        <td><button class="copyBtn" onclick="copyCode('hex')">Copy</button></td>
+                    </tr>
+                    <tr>
+                        <td>CMYK</td>
+                        <td id="cmyk">( 0%, 0%, 0%, 100% )</td>
+                        <td><button class="copyBtn" onclick="copyCode('cmyk')">Copy</button></td>
+                    </tr>
+                    <tr>
+                        <td>HSV</td>
+                        <td id="hsv">( 120°, 0%, 0% )</td>
+                        <td><button class="copyBtn" onclick="copyCode('hsv')">Copy</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
