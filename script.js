@@ -25,11 +25,3 @@ menuMore.addEventListener('click', () => {
 function toggleDialog() {
     menu.close();
 }
-
-/* Context Menu
-
-document.addEventListener("contextmenu", (e) => {
-     e.preventDefault();
-});
-
-*/
