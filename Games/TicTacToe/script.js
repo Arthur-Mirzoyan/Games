@@ -85,14 +85,16 @@ function isWin() {
         if (countX == 3) {
             winX++;
             restart();
+            break;
         }
         else if (countO == 3) {
             winO++;
             restart();
+            break;
         }
-        scoreX.innerText = winX;
-        scoreO.innerText = winO;
     }
+    scoreX.innerText = winX;
+    scoreO.innerText = winO;
     if (clickCount >= 9) restart("tie");
 }
 
