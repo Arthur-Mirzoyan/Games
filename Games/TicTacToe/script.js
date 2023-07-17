@@ -164,7 +164,7 @@ function thinkAI() {
             else clicked(angles[Math.floor(Math.random() * angles.length)]);
         }
 
-        // Second step for AI
+        // Next steps for AI
         else {
             let find = findWinningLine("X");
             if (find) clicked(find);
