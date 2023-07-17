@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/menu.css">
+        <link rel="shortcut icon" href="../img/tic_tac_toe.png" type="image/x-icon">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="menu">
+            <img src="img/logo.png" id="logo">
+            <h1>Tic Tac Toe</h1>
+            <button onclick="changeMode(1)" class="active" id="btn1">1 Player</button>
+            <button onclick="changeMode(2)" id="btn2">2 Players</button>
+            <button onclick="startGame()" id="start">Play</button>
+        </div>
+        <div class="infoDesk">
+            <div class="box player1">X</div>
+            <h2 id="pl1"></h2>
+            <h2 id="score1">0</h2>
+            <h2 id="score2">0</h2>
+            <h2 id="pl2"></h2>
+            <div class="box player2">O</div>
+        </div>
+        <div class="display">
+            <button class="fields" onclick="clicked(1)"></button>
+            <button class="fields" onclick="clicked(2)"></button>
+            <button class="fields" onclick="clicked(3)"></button>
+            <button class="fields" onclick="clicked(4)"></button>
+            <button class="fields" onclick="clicked(5)"></button>
+            <button class="fields" onclick="clicked(6)"></button>
+            <button class="fields" onclick="clicked(7)"></button>
+            <button class="fields" onclick="clicked(8)"></button>
+            <button class="fields" onclick="clicked(9)"></button>
+        </div>
+    </body>
+</html>
