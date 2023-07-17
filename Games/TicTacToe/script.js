@@ -107,15 +107,14 @@ function restart(result) {
 
     setTimeout(() => {
         AIStep = 0;
-        if (gameMode == 1 && sign == "O") thinkAI();
-
-
 
         buttons.forEach(button => {
             button.disabled = false;
             button.innerText = "";
             button.style.backgroundColor = "#fff";
         })
+
+        if (gameMode == 1 && sign == "O") thinkAI();
     }, 100);
 }
 
@@ -166,26 +165,40 @@ function thinkAI() {
         }
 
         // Second step for AI
-        else if (AIStep == 1) {
-            // Checking corresponding angle
-            let last = steps[steps.length - 1];
-            if (allSteps.includes(AISteps[last])) clicked(AISteps[last]);
-            else clicked(angles[Math.floor(Math.random() * angles.length)]);
-        }
-
-        // Other steps for AI
-        else if (AIStep >= 2) {
-            // Checking winning line for AI
+        else {
             let find = findWinningLine("X");
             if (find) clicked(find);
-
-            // CHecking winning line for Player
             else {
                 find = findWinningLine("O");
                 if (find) clicked(find);
-                else clicked(allSteps[Math.floor(Math.random() * allSteps.length)]);
+                else {
+                    let last = steps[steps.length - 1];
+                    if (allSteps.includes(AISteps[last])) clicked(AISteps[last]);
+                    else if (angles.length != 0) clicked(angles[Math.floor(Math.random() * angles.length)]);
+                    else clicked(allSteps[Math.floor(Math.random() * allSteps.length)]);
+                }
             }
         }
+        // else if (AIStep == 1) {
+        //     // Checking corresponding angle
+        //     let last = steps[steps.length - 1];
+        //     if (allSteps.includes(AISteps[last])) clicked(AISteps[last]);
+        //     else clicked(angles[Math.floor(Math.random() * angles.length)]);
+        // }
+
+        // // Other steps for AI
+        // else if (AIStep >= 2) {
+        //     // Checking winning line for AI
+        //     let find = findWinningLine("X");
+        //     if (find) clicked(find);
+
+        //     // CHecking winning line for Player
+        //     else {
+        //         find = findWinningLine("O");
+        //         if (find) clicked(find);
+        //         else clicked(allSteps[Math.floor(Math.random() * allSteps.length)]);
+        //     }
+        // }
         AIStep++;
     }, 125)
 }
