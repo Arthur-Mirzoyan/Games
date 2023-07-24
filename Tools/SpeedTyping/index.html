@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="scripts/data.js"></script>
+        <script src="scripts/stopwatch.js"></script>
+        <script defer src="scripts/keyboard.js"></script>
+        <script defer src="scripts/script.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div title="Stopwatch" id="timer">0 : 000</div>
+            <div title="You will have to type this text" id="textbox"></div>
+            <div title="Current word" id="inputtext"></div>
+            <input title="Entry" type="text" placeholder="To start, type here." id="inputbox">
+            <div title="Keyboard" id="keyboard">
+                <div id="row1" class="row"></div>
+                <div id="row2" class="row"></div>
+                <div id="row3" class="row"></div>
+            </div>
+        </div>
+
+        <dialog>
+            <div class="dialogBox">
+                <h2>You Have Done !!!</h2>
+                <p id="result">1 : 26 : 756</p>
+                <button id="restartBtn" onclick="restart()">Restart</button>
+            </div>
+        </dialog>
+    </body>
+</html>

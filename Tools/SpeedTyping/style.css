@@ -1,0 +1,209 @@
+:root {
+    --main-color: #40b3a2;
+    --contrast-color: #e27d60;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --key-color: #2c6966;
+    --key-down-color: rgb(31, 104, 100);
+    --input-color: #83d6ca;
+
+    --gap: 1em;
+    --key-size: 3.125em;
+    --key-font-size: 1.25em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--main-color);
+}
+
+#container {
+    padding: 20px 20%;
+    height: 100%;
+    display: grid;
+    gap: 20px;
+}
+
+/* Timer */
+
+#timer {
+    background-color: var(--contrast-color);
+    padding: 10px 20px;
+    font: 1.5rem Arial;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    box-shadow: 6px 7px 20px 1px var(--shadow-color);
+}
+
+/* InputText */
+
+#inputtext {
+    height: 100%;
+    background-color: var(--input-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 1.5rem Arial;
+    border-radius: 10px;
+    box-shadow: 6px 7px 20px 1px var(--shadow-color);
+}
+
+/* Textbox */
+
+#textbox {
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: #e8a87c;
+    padding: 10px 20px;
+    font: 1.5rem Arial;
+    height: max-content;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 6px 7px 20px 1px var(--shadow-color);
+}
+
+/* Inputbox */
+
+#inputbox {
+    font: 20px Arial;
+    border-radius: 10px;
+    color: black;
+    background-color: var(--input-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 10px 20px;
+    box-shadow: 6px 7px 20px 1px var(--shadow-color);
+}
+
+/* Keyboard */
+
+#keyboard {
+    box-shadow: 6px 7px 20px 1px var(--shadow-color);
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 1.25em;
+    display: grid;
+    gap: var(--gap);
+    height: min-content;
+}
+
+#keyboard>.row {
+    display: flex;
+    gap: var(--gap);
+    justify-content: center;
+}
+
+.key {
+    height: var(--key-size);
+    width: var(--key-size);
+    border-radius: 5px;
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    font: var(--key-font-size) Arial;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0 10px 7px gray;
+    background-color: var(--key-color);
+    color: white;
+    box-shadow: 6px 7px 10px 0px var(--shadow-color);
+}
+
+.space {
+    justify-self: center;
+    width: 75%;
+    height: var(--key-size);
+}
+
+/* Dialog */
+
+dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border: none;
+    box-shadow: 0 0 50px 10px var(--shadow-color);
+    border-radius: 15px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialogBox {
+    width: 250px;
+    height: 250px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    color: white;
+    background-color: var(--contrast-color);
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+#result {
+    display: grid;
+    place-items: center;
+    align-self: flex-start;
+    shape-outside: circle(50%);
+    font-size: 20px;
+}
+
+#restartBtn {
+    border-radius: 10px;
+    border: none;
+    background-color: var(--key-color);
+    color: var(--contrast-color);
+    font: 20px Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Animations */
+
+@keyframes inputLine {
+    0% {
+        width: 1px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+/* Media */
+
+@media screen and (max-width: 1200px) {
+    #container {
+        padding: 20px 10%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #container {
+        padding: 10px;
+    }
+
+    :root {
+        --key-size: 5vw;
+        --key-font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #container {
+        padding: 2px;
+    }
+}

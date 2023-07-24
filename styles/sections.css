@@ -39,6 +39,7 @@
     display: grid;
     place-items: center;
     transition: .2s all linear;
+    text-transform: uppercase;
 }
 
 .card>a:hover {
